@@ -60,6 +60,22 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  var i = 0;
+  var a = "";
+  do {
+    var j = palabras[i];
+    if(a.length === 0){
+      a = j;
+      i = i + 1;
+    }
+    else if(a.length > 0){
+      a = a + " " + j;
+      i = i + 1;
+    }
+
+  } while (i < palabras.length);
+  
+  return a;
 }
 
 
@@ -83,10 +99,14 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  for (var i = 0; i < numeros.length; i++){
-    var r = numeros[i] + r; 
-  }
-  return resultado;
+  i = 0;
+  r = 0;
+  do {
+    r = r + numeros[i];
+    i = i + 1;
+  } while (i < numeros.length)
+
+  return r;
 }
 
 
@@ -94,6 +114,17 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  var promedio = 0;
+  var i = 0;
+  
+  do {
+    promedio = promedio + resultadosTest[i];
+    i = i + 1;
+  } while (i < resultadosTest.length)
+
+  promedio = promedio  / i;
+  
+  return promedio;
 }
 
 
@@ -101,6 +132,15 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var r = 0;
+  for (var i = 0; i < numeros.length; i++){
+    var a = numeros[i];
+    if (r < a){
+      r = a;
+    }
+  }
+  return r;
+
 }
 
 
@@ -114,6 +154,15 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
+  var f = 0;
+  for (var i = 0; i < arreglo.length; i++){
+    var k = arreglo[i];
+    if (k > 18){
+      f = f + 1;
+    }
+  }
+
+  return f;
 
 }
 
