@@ -171,8 +171,11 @@ function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
-  //Escribe tu código aquí   
-  
+  //Escribe tu código aquí  
+  if (numeroDeDia === 1 || numeroDeDia === 7){
+    return "Es fin de semana"
+  }
+  return "Es dia Laboral";
 } 
 
 
@@ -180,14 +183,22 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
 }
 
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
-  //Escribe tu código aquí  
+  //Escribe tu código aquí 
+  var a = arreglo[0];
+
+  for (var i = 0; i < arreglo.length; i++){
+    var b = arreglo[i];
+    if (a != b){
+      return false
+    }
+  }
+  return true;
   
 } 
 
@@ -197,6 +208,23 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var a = []
+  for (var mes in array){
+    if (a.length === 2){
+      return a;
+    }
+    if (mes === "Marzo"){
+      a = a + mes;
+      }
+    }
+    if (mes === "Noviembre"){
+      a = a + mes;
+    }
+    if (mes === "Enero"){
+      a = a + mes;
+    };
+  return "No se encontraron los meses pedidos";
+    
 }
 
 
@@ -204,6 +232,15 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var newArray = [];
+  for (var i = 0; i < array.length; i++){
+    var a = array[i];
+    if (a > 100){
+      newArray.push(a);
+    }
+  }
+  return newArray;
+
 }
 
 
